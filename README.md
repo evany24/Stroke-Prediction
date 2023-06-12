@@ -9,7 +9,7 @@ Using different modeling techniques we can try to predict the instance of stroke
 
 (https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset/download?datasetVersionNumber=1)
 
-## **[Source of Data:]**
+## **[Source of Data]**
 
 (https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset))
 

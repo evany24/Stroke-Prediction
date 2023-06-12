@@ -5,8 +5,12 @@
 
 Using different modeling techniques we can try to predict the instance of stroke in patients.
 
+## **[Link to Dataset]
+
+!(https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset/download?datasetVersionNumber=1)
 ## **Source of Data:**
-![stroke_prediction kaggle](https://github.com/evany24/Stroke-Prediction/blob/main/healthcare-dataset-stroke-data.csv)
+
+!(https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset))
 
 ## **Data Dictionary:**
 - 1) id: unique identifier
@@ -36,7 +40,7 @@ Using different modeling techniques we can try to predict the instance of stroke
 
  - Strokes appear to be more common in people who are aged 40 and above
 
-## **Stroke by Smoking Status
+## **Stroke by Smoking Status**
 
 ![Stroke by Smoking Status](https://github.com/evany24/Stroke-Prediction/blob/main/smoking%20status%20stroke.png)
 

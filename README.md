@@ -6,7 +6,7 @@
 Using different modeling techniques we can try to predict the instance of stroke in patients.
 
 ## **Source of Data:**
-![sales_prediction-2023.csv](https://github.com/evany24/Predictions-of-Product-Sales/blob/main/sales_predictions_2023.csv)
+![stroke_prediction kaggle](https://github.com/evany24/Stroke-Prediction/blob/main/healthcare-dataset-stroke-data.csv)
 
 ## **Data Dictionary:**
 - 1) id: unique identifier

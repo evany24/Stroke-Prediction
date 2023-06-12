@@ -9,89 +9,56 @@ Using different modeling techniques we can try to predict the instance of stroke
 ![sales_prediction-2023.csv](https://github.com/evany24/Predictions-of-Product-Sales/blob/main/sales_predictions_2023.csv)
 
 ## **Data Dictionary:**
+- 1) id: unique identifier
+- 2) gender: "Male", "Female" or "Other"
+- 3) age: age of the patient
+- 4) hypertension: 0 if the patient doesn't have hypertension, 1 if the patient has hypertension
+- 5) heart_disease: 0 if the patient doesn't have any heart diseases, 1 if the patient has a heart disease
+- 6) ever_married: "No" or "Yes"
+- 7) work_type: "children", "Govt_jov", "Never_worked", "Private" or "Self-employed"
+- 8) Residence_type: "Rural" or "Urban"
+- 9) avg_glucose_level: average glucose level in blood
+- 10) bmi: body mass index
+- 11) smoking_status: "formerly smoked", "never smoked", "smokes" or "Unknown"*
+ - *Note: "Unknown" in smoking_status means that the information is unavailable for this patient
+- 12) stroke: 1 if the patient had a stroke or 0 if not
 
-![data dictionary](https://github.com/evany24/Predictions-of-Product-Sales/blob/main/data%20dictionary.png)
 
-# **Exploratory Data Analysis**:
-- An exploratory data analysis was done on the data. Boxplots and histograms were created to help understand distributions of numeric data, while barplots were created for categoric data
-- Both univariate and multivariate graphs were created for EDA.
+## **Stroke Distribution**
 
-![Item Fat Content Distribution](https://github.com/evany24/Predictions-of-Product-Sales/blob/main/Item%20Fat%20Content%20Distribution.png)
+![Stroke Instance](https://github.com/evany24/Stroke-Prediction/blob/main/stroke%20distribution.png)
 
- - This plot shows the distribution of items sold by their fat content. The items were grouped into 2 categories, Low Fat and Regular.
+ - The number of people who have strokes is small in comparison to those who do not
 
-# **Explanatory Data Analysis**:
+## **Stroke by Age**
 
-## **Questions:**
+![Stroke by Age](https://github.com/evany24/Stroke-Prediction/blob/main/stroke%20by%20age.png)
 
-**How does Item MRP affect Item Outlet Sales?**
+ - Strokes appear to be more common in people who are aged 40 and above
 
-![Item MRP vs Item Outlet Sales](https://github.com/evany24/Predictions-of-Product-Sales/blob/main/Item%20MRP%20vs%20Item%20Outlet%20Sales.png)
+## **Stroke by Smoking Status
 
- - There is a postive correlation between Item MRP and Item Outlet Sales which means as Item MRP increases so do Item Outlet Sales.
+![Stroke by Smoking Status](https://github.com/evany24/Stroke-Prediction/blob/main/smoking%20status%20stroke.png)
 
-**Is there a correlation between Item Visibility and Item Outlet Sales?**
+- Strokes appear to be evenly distributed among people with different smoking status.
+- While it appears there may be more in people who never smoked that may be due to the fact there are more people in the never smoked category
 
-![Item Visibility vs Item Outlet Sales](https://github.com/evany24/Predictions-of-Product-Sales/blob/main/Item%20Visibility%20vs%20Item%20Outlet%20Sales.png)
+## **BMI vs Age**
 
- - There is a slightly negative correlation between Item Visibilty and Item Outlet Sales. This means that as Item Visibility increases the Item Outlet Sales decrease. This correlation is opposite but much smaller in comparison to the correlation of Item MRP on Item Outlet Sales.
+![BMI by Age](https://github.com/evany24/Stroke-Prediction/blob/main/bmi%20vs%20age.png)
 
-### **Correlation can be visualized using this heat map:**
+- There is a minor positive correlation between BMI and Age
+- This could mean that as age tends to go up so does BMI and because of this so do instances of stroke
 
-![Product Sales Correlations.png](https://github.com/evany24/Predictions-of-Product-Sales/blob/main/Product%20Sales%20Correlations.png)
+## **Avg Glucose Lvl by Age**
 
-**What Item Types have the highest and lowest sales?**
+![Average Glucose Level by Age](https://github.com/evany24/Stroke-Prediction/blob/main/glucose%20by%20age.png)
 
-![Item Outlet Sales by Item Type](https://github.com/evany24/Predictions-of-Product-Sales/blob/main/Item%20Outlet%20Sales%20by%20Item%20Type.png)
+- There is a minor positive correlation between Avg Glucose Level and Age
+- Just like BMI with the minor positive correlation avg glucose level appears to go up and so do instances of stroke
 
- - Fruits and vegetables have the highest Item Outlet Sales and are 15.17% of all sales followed by Snack Foods at 14.70% and Household items at 11.06%. Breakfast items and Seafood items have the lowest Item Outlet Sales with 1.25% and 0.80% respectively.
+## **Model Evaluation**
 
-**Which Outlet Size has the highest and lowest sales?**
-
-![Item Outlet Sales by Outlet Size](https://github.com/evany24/Predictions-of-Product-Sales/blob/main/Item%20Outlet%20Sales%20by%20Outlet%20Size.png)
-
- - Medium size stores have the highest item sales accounting for 40.29% of all sales. Next are small stores with 24.56% followed by uncategorized stores at 23.63%. The large stores account for only 11.52% of total item sales.
-
-**What Outlet Types having the highest and lowest sales?**
-
-![Item Outlet Sales by Outlet Type](https://github.com/evany24/Predictions-of-Product-Sales/blob/main/Item%20Outlet%20Sales%20by%20Outlet%20Type.png)
-
- - Supermarket Type 1 stores have the highest item sales accounting for 69.48% of total sales. There is a large drop off with Supermarket Type 3 store sales at 18.58%, Supermarket Type 2 store sales at 9.96% and lastly grocery store sales at 1.98%
-
-**What is the comparison of Item Outlet Sales when looking at Item Fat Content?**
-
-![Item Outlet Sales by Item Fat Content](https://github.com/evany24/Predictions-of-Product-Sales/blob/main/Item%20Outlet%20Sales%20by%20Item%20Fat%20Content.png)
-
- - Low Fat item sales are almost double that of regular fat items. Low Fat items account for 64.03% of total item sales while Regular items account for only 35.97%
-
-## **Summary of analysis.**
-
-- Low Fat items are selling much better than Regular Fat items.
-- Item MRP has a very strong link to higher total item sales
-- Item visibility does not have a strong effect on total item sales
-- Fruits and vegetables and snack food have the highest sales. Breakfast and Seafood items may need restructering techniques to bring sales up.
-
-## **Machine Learning:**
-- A linear regression model and a decision tree model were used to predict Item Outlet Sales.
-
-## **Model evaluations and metrics**
-
-- Linear Regression Model on testing data:
-  - MAE: 804.2645 
-  - MSE: 1,194,403.5311 
-  - RMSE: 1,092.8877 
-  - R2: 0.5671
-  
-- Final Decision Tree Model on testing data:
-  - MAE: 738.3556 
-  - MSE: 1,118,187.9463 
-  - RMSE: 1,057.4441 
-  - R2: 0.5947
-
-## **Model Recommendations:**
-
-  - The Decison Tree is the better model to predict Item Outlet Sales.
-  - The mean value for Item Outlet Sales was ₹2,181.29.
-  - The MAE for Item Outlet Sales was ₹738.36 which makes the error 33.85%.
-  - THE MSE and RMSE are slightly lower for the decision tree model, meaning that the decision tree model may be handling any higher outliers in check.
-  - The R2 score of close to 60 percent for the decision tree model also beats out the 55 percent R2 score for the linear regression model. This higher score while not a great way to explain the decision tree model being much better helps its validity.
+- The best overall model remained the tuned under sampled logistic regression model.
+ -  The model made true positive predictions at a rate of 83% and true negative predictions at 71%. The model is making the correct predictions 72% of the time. While that is not a wonderful score most of the incorrect predictions are stemming from false positives which are less costly.
+- Recall for the positive class is at 83% which is close to the highest number from all models. While there were some models that were slightly higher at 85% those other models had more false negatives which are more costly.

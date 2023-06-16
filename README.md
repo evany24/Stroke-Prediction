@@ -42,7 +42,7 @@ Using different modeling techniques we can try to predict the instance of stroke
 
 ## **Stroke by Smoking Status**
 
-![Stroke by Smoking Status](https://github.com/evany24/Stroke-Prediction/blob/main/smoking%20status%20stroke.png)
+![Stroke Distribution over Different Features](https://github.com/evany24/Stroke-Prediction/blob/main/violinplotstroke.png)
 
 - Strokes appear to be evenly distributed among people with different smoking status.
 - While it appears there may be more in people who never smoked that may be due to the fact there are more people in the never smoked category

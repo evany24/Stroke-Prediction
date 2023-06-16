@@ -84,6 +84,7 @@ Using different modeling techniques we can try to predict the instance of stroke
 
 ## **Model Evaluation**
 
+![Under Sampled Tuned Logistic Regression Confusion Matrix and False Positive AUC](https://github.com/evany24/Stroke-Prediction/blob/main/tunedlogregmodel.png)
 - The best overall model remained the tuned under sampled logistic regression model.
  -  The model made true positive predictions at a rate of 83% and true negative predictions at 71%. The model is making the correct predictions 72% of the time. While that is not a wonderful score most of the incorrect predictions are stemming from false positives which are less costly.
 - Recall for the positive class is at 83% which is close to the highest number from all models. While there were some models that were slightly higher at 85% those other models had more false negatives which are more costly.

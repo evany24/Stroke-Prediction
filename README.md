@@ -28,14 +28,20 @@ Using different modeling techniques we can try to predict the instance of stroke
 12. stroke: 1 if the patient had a stroke or 0 if not 
  *Note: "Unknown" in smoking_status means that the information is unavailable for this patient
 
+# **Exploratory Data Analysis**:
+- An exploratory data analysis was done on the data. Countplots and histograms were created to help understand distributions of numeric data. Countplots were used for categorical data as well.
+- The exploratory data analysis allowed us to remove the 'other' feature from the gender column and the 'never_worked' feature in the work type column.
+  
 ## **Stroke Distribution**
 
 ![Stroke Instance](https://github.com/evany24/Stroke-Prediction/blob/main/stroke%20distribution.png)
 
  - The number of people who have strokes is small in comparison to those who do not
 
-## **Stroke by Age**
+# **Explanatory Data Analysis**:
 
+- Plots were made to explain the data before modeling some insights and visuals are as follows:
+  
 ![Stroke by Age, Avg Glucose and bmi](https://github.com/evany24/Stroke-Prediction/blob/main/strokekernelplot.png)
 
  - As age increases so does instance of stroke. It is occuring mostly in people aged 40 and above.
@@ -67,6 +73,14 @@ Using different modeling techniques we can try to predict the instance of stroke
 
 - There is a minor positive correlation between Avg Glucose Level and Age
 - Just like BMI with the minor positive correlation avg glucose level appears to go up and so do instances of stroke
+
+## **Machine Learning:**
+
+- Three main models were used to predict the instance of stroke.
+  - Logistic Regression
+  - KNN
+  - Random Forest
+ - These models were tuned using gridsearchcv, SMOTE and by under sampling.
 
 ## **Model Evaluation**
 

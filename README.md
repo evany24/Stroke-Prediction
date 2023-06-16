@@ -36,9 +36,11 @@ Using different modeling techniques we can try to predict the instance of stroke
 
 ## **Stroke by Age**
 
-![Stroke by Age](https://github.com/evany24/Stroke-Prediction/blob/main/strokekernelplot.png)
+![Stroke by Age, Avg Glucose and bmi](https://github.com/evany24/Stroke-Prediction/blob/main/strokekernelplot.png)
 
- - Strokes appear to be more common in people who are aged 40 and above
+ - As age increases so does instance of stroke. It is occuring mostly in people aged 40 and above.
+ - For average glucose level it appears that a large majority of the non stroke class have avg glucose levels between 50 and 150. People who are having stroked have a wide distribution of avg glucose level. There isn't much correlation.
+ - For bmi the plot is telling us that there is almost no correlation between this feature and instance of stroke.
 
 ## **Stroke by Smoking Status**
 

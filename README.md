@@ -36,7 +36,7 @@ Using different modeling techniques we can try to predict the instance of stroke
 
 ## **Stroke by Age**
 
-![Stroke by Age](https://github.com/evany24/Stroke-Prediction/blob/main/stroke%20by%20age.png)
+![Stroke by Age](https://github.com/evany24/Stroke-Prediction/blob/main/strokekernelplot.png)
 
  - Strokes appear to be more common in people who are aged 40 and above
 
